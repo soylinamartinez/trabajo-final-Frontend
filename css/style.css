@@ -13,22 +13,8 @@ body {
    width: 100%;
 }
 
-
-
-/* apply a natural box layout model to all elements, but allowing components to change */
-html {
-    box-sizing: border-box; /*https://www.paulirish.com/2012/box-sizing-border-box-ftw/*/
-  }
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
-
-
-
-
-/*Estilos del Header*/
+/*Estilos del header*/
 header {
-    text-align: center;
     padding: 24px 48px;
     margin-bottom: 64px;    
 }
@@ -37,103 +23,32 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
 }
 
 .header-logo {
-    padding: 8px;
+    padding: 4px;
 }
 
 .header-container-menu-hamburguesa {
     width: 60px;
     height: 60px;
 
-    & img{
+    & img {
         width: 100%;
         height: 100%;
         padding: 8px 6px;
     }
 }
 
-.header{
-    display: inline-flex;
-padding: 100px 165px;
-padding-bottom: 600px;
-justify-content: center;
-align-items: center;
-gap: 224px;
-}
+/*Estilos barra navegación*/
 
-.nav{
-    display: none;
-    justify-content: center;
-    align-items: center;
-    gap: 28px;
-}
-
-.btn-contact {
+.nav-bar {
     display: none;
 }
 
-@media (min-width: 480px) { /*Si es mayor a 480px aplica esto*/
-    .nav a{
-        color: #242E52;
-        font-family: Be Vietnam;
-        font-size: 13px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: normal;
-        text-decoration: none; 
-    }
-    .nav{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 28px;
-        
-    }
-
-    .header-container-menu-hamburguesa {
-        width: 60px;
-        height: 60px;
-        display: none;
-        & img{
-            width: 100%;
-            height: 100%;
-            padding: 8px 6px;
-            display: none;
-        }
-    }
-
-    .btn-contact {
-        color: #FFF;
-        font-family: Be Vietnam;
-        font-size: 13.181px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: normal;
-        display: flex;
-        width: 134px;
-        height: 44px;
-        padding: 10px;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        border-radius: 50px;
-        background: #8B48BF;
-        box-shadow: 0px 4px 7px 0px rgba(0, 0, 0, 0.25);
-    }
-    
-    .boton-contacto{
-        background:#8B48BF;
-        border-radius: 50px;
-        color: white;
-        border: none;
-    }
+.header-button {
+    display: none;
 }
-
-
-
 
 /*Estilos seccion 1*/
 .hero {
@@ -152,7 +67,6 @@ gap: 224px;
 }
 
 .hero .hero-container-description {
-    /* background-color: mediumvioletred; */
     padding: 0 48px;
     text-align: right;
     margin-top: 100px;
@@ -197,7 +111,6 @@ gap: 224px;
 /*Estilos de la sección beneficios*/
 .container-benefits {
     width: 100%;
-    background-color: papayawhip;
     padding: 48px 32px 0px 32px;
 }
 
@@ -268,6 +181,7 @@ gap: 224px;
     position: absolute;
     top: -35px;
 }
+
 p.title-review {
     font-size: 1.6rem;
     font-weight: 700;
@@ -317,12 +231,11 @@ p.title-teams {
 
 button.boton-teams {
     background-color: #232C50;
-    border: 1px solid #232C50;
+    border: none;
     padding: 16px 56px;
     border-radius: 24px;
     color: white;
     font-size: 14px;
-    transition: all 400ms ease;
 }
 
 /*------------------Estilos del footer-------------------*/
@@ -413,4 +326,66 @@ footer > p {
     font-size: 1.2rem;
     font-weight: 400;
     color: #8C8C94;
+}
+
+
+/*Media Queries*/
+
+@media (min-width: 800px) {
+
+    .nav-bar {
+        display: block;
+    }
+    
+    .header-button {
+        display: block;
+    }
+
+    .header-container-menu-hamburguesa {
+        display: none;
+    }
+
+    ul.list-nav-bar {
+        list-style: none;
+        padding-left: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .nav-bar ul li {
+        margin: 8px 16px;
+    }
+
+    .list-nav-bar a {
+        text-decoration: none;
+        color: #242E52;
+        font-size: 1.3rem;
+        font-weight: 400;
+        line-height: 2.4rem;
+    }
+
+    /*Estilos hero*/
+
+    .hero {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 48px;
+        margin-bottom: 64px;
+
+    }
+
+    .hero-container-image {
+        max-width: 540px;
+        margin: 0;
+    }
+
+    .hero .hero-container-description {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-right: 24px;
+        max-width: 450px;
+        min-width: 350px;
+        padding: 0;
+    } 
 }

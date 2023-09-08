@@ -6,58 +6,58 @@
     <title>sportit</title>
     <link rel="preload" href="css/style.css" as="style">
     <link href="css/style.css" rel="stylesheet">
-    <link rel="preload" href="css/normalize.css" as="style">
-    <link href="css/normalize.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-
+    <link href="css/normalize.css" rel="stylesheet">
+    <link rel="preload" href="css/normalize.css" as="style">
 </head>
 <body>
     
     <header>
         <div class="container-header">
 
-
             <div class="header-logo">
                 <img src="./icon/logo.svg" alt="logo de la marca Sportit">
             </div>
-
 
             <div class="header-container-menu-hamburguesa">
                 <img src="./icon/icon-hamburger-mobile.svg" alt="icono-menu">
             </div>
 
-
-
-            <nav class="nav">
-                <a href="#">Sports</a>
-                <a href="#">Products</a>
-                <a href="#">About Us</a>
-                <a href="#">Trainning</a>
-                <a href="#">Community</a>
+            <nav class="nav-bar">
+                <ul class="list-nav-bar">
+                    <li>
+                        <a href="">Sports</a>
+                    </li>
+                    <li>
+                        <a href="">Products</a>
+                    </li>
+                    <li>
+                        <a href="">About Us</a>
+                    </li>
+                    <li>
+                        <a href="">Training</a>
+                    </li>
+                    <li>
+                        <a href="">Community</a>
+                    </li>
+                </ul>
             </nav>
 
-            <div class="btn-contact">
-                <button class="boton-contacto">
-                    Contact
-                </button>
-            </div>
-
+            <button class="primary-button header-button">Contact</button>
 
         </div>
 
     </header>
 
-    
-
-
-
     <main>
         <section class="hero">
+
             <div class="hero-container-image">
                 <img src="./img/padel-intro.png" alt="jugador de padel">
             </div>
+
             <div class="hero-container-description">
                 <h1>LIVE: Follow the Telcel Huawei Mexico Open 2022 for free </h1>
 
@@ -65,15 +65,21 @@
 
                 <button class="primary-button">Contact</button>
             </div>
+
         </section>
 
         <section class="container-pros">
+
             <h2>What's different between pros?</h2>
+
             <p>Manage provides all the functionality your teas needs, without the complexity. Our software is tailor-made for modern digital product teams</p>
+
         </section>
 
         <section class="container-benefits">
-            <div class="caja-flex-benefits">
+
+            <!-- <div class="caja-flex-benefits">
+
                 <article class="beneficio-1 beneficios" >
                     <div class="title-benefit">
                         <span>01</span>
@@ -82,7 +88,8 @@
                     
                     <p>Donec elit est, mattis lacinia arcu eu, efficitur consequat augue. Nam tellus sem, tempus pellentesque egestas vitae, efficitur vel nulla. Etiam vel orci rutrum, placerat quam eget, consequat dolor.</p>
                 </article>
-                <!-- <article class="beneficio-2 beneficios" >
+
+                <article class="beneficio-2 beneficios" >
                     <div class="title-benefit">
                         <span>01</span>
                         <p>Advance built-in reports</p>
@@ -90,6 +97,7 @@
 
                     <p>Donec elit est, mattis lacinia arcu eu, efficitur consequat augue. Nam tellus sem, tempus pellentesque egestas vitae, efficitur vel nulla. Etiam vel orci rutrum, placerat quam eget, consequat dolor.</p>
                 </article>
+
                 <article class="beneficio-3 beneficios" >
                     <div class="title-benefit">
                         <span>01</span>
@@ -97,11 +105,16 @@
                     </div>
 
                     <p>Donec elit est, mattis lacinia arcu eu, efficitur consequat augue. Nam tellus sem, tempus pellentesque egestas vitae, efficitur vel nulla. Etiam vel orci rutrum, placerat quam eget, consequat dolor.</p>
-                </article> -->
-            </div>
+                </article>
+
+            </div> -->
+
         </section>
+
         <section class="container-reviews">
+
             <h2>Best of the month</h2>
+
             <div class="container-tarjetas-reviews">
                 
                 <div class="tarjeta-review-contenido">
@@ -111,25 +124,32 @@
                         Etiam fermentum, nulla eget gravida cursus, purus lectus feugiat mauris, ut suscipit massa ipsum eu neque. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
                     </p> 
                 </div>
+
                 <button class="primary-button">More</button>
+
             </div>
+
         </section>
+
         <section class="container-teams">
+
             <p class="title-teams">
                 Get to know the best teams of the year
             </p>
+
             <button class="boton-teams">
                 Go for it
             </button>
+
         </section>
     </main>
-
 
     <footer>
         <form action="#" class="footer-email">
             <input type="email" class="input-email" placeholder="Update in your inbox">
             <input type="submit" class="input-button" value="Go">
         </form>
+
         <div class="footer-menu">
             <ul class="footer-left-menu">
                 <li><a href="">Home</a></li>
@@ -143,7 +163,9 @@
                 <li><a href="">Privacy Policy</a></li>
             </ul>
         </div>
+
         <div class="footer-social-icons">
+
             <ul>
                 <li><a href="#"><img src="./icon/icon-facebook.svg" alt=""></a></li>
                 <li><a href="#"><img src="./icon/icon-instagram.svg" alt=""></a></li>
@@ -151,11 +173,15 @@
                 <li><a href="#"><img src="./icon/icon-pinterest.svg" alt=""></a></li>
                 <li><a href="#"><img src="./icon/icon-youtube.svg" alt=""></a></li>
             </ul>
+
         </div>
+
         <div class="logo-footer">
             <img src="./icon/logo-blanco.png" alt="logo">
         </div>
+
         <p>Copyright 2020. All Rights Reserved</p>
+
     </footer>
 </body>
 </html>
