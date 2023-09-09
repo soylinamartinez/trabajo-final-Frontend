@@ -111,12 +111,8 @@ header {
 /*Estilos de la sección beneficios*/
 .container-benefits {
     width: 100%;
-    padding: 48px 32px 0px 32px;
+    /* padding: 48px 32px 0px 32px; */
 }
-
-/* .caja-flex-benefits {
-    
-} */
 
 .caja-flex-benefits .beneficios {
     min-width: 400px;
@@ -126,10 +122,13 @@ header {
 }
 
 .title-benefit {
-    margin-bottom: 8px;
-    font-weight: 700;
-    height: 45px;
-    background-color: rgba(139, 72, 191, 0.3);
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 8px;
+    align-self: stretch;
+    border-radius: 50px 0px 0px 50px;
+    background: rgba(139, 72, 191, 0.30);
 
     & span {
         background-color: #8B48BF;
@@ -148,6 +147,9 @@ header {
 .container-reviews {
     width: 100%;
     margin-top: 56px;
+    background-color: bisque;
+    padding: 0 84px;
+    text-align: center;
 }
 
 .container-reviews h2 {
@@ -160,29 +162,30 @@ header {
 }
 
 .container-tarjetas-reviews {
-    text-align: center;
-    margin-bottom: 56px;
+    margin-bottom: 48px;
+}
+
+.tarjetas {
+    display: none;
 }
 
 .tarjeta-review-contenido {
     background-color: #FAFAFA;
-    width:380px;
+    min-width:380px;
     margin: 0 auto;
-    margin-bottom: 48px;
     padding: 56px 24px 32px 24px;
     position: relative;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+    & .img-tarjeta {
+        position: absolute;
+        right: 155px;
+        top: -35px;
+    }
 }
 
-.container-tarjetas-reviews .tarjeta-review-information img {
-    position: absolute;
-    top: -35px;
-}
 
-p.title-review {
+.tarjeta-review-contenido p.title-review {
     font-size: 1.6rem;
     font-weight: 700;
     color: #3F4868;
@@ -194,6 +197,10 @@ p.parrafo-tarjeta-review {
     font-weight: 400;
     line-height: 25px;
     color: #B9B9C1;
+}
+
+.review-button {
+    margin-bottom: 48px;
 }
 
 button.primary-button {
@@ -243,8 +250,8 @@ footer {
     width: 100%;
     background-color: #1E1E26;
     padding: 48px 32px;
-
 }
+
 .footer-email {
     text-align: center;
     margin-bottom: 32px;
@@ -331,7 +338,12 @@ footer > p {
 
 /*Media Queries*/
 
-@media (min-width: 800px) {
+@media (min-width: 850px) {
+
+    .container-header {
+        max-width: 85%;
+        margin: 0 auto;
+    }
 
     .nav-bar {
         display: block;
@@ -367,12 +379,12 @@ footer > p {
     /*Estilos hero*/
 
     .hero {
+        max-width: 90%;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 48px;
-        margin-bottom: 64px;
-
+        padding: 64px;
+        margin: 0 auto;
     }
 
     .hero-container-image {
@@ -388,4 +400,94 @@ footer > p {
         min-width: 350px;
         padding: 0;
     } 
-}
+
+    .container-pros {
+        display: flex;
+        justify-content: space-around;
+        background-color: #8B48BF;
+        height: 160px;
+    }
+
+    .container-pros h2 {
+        max-width: 450px;
+    }
+    .container-pros p {
+        max-width: 450px;
+    }
+
+    /*Aca van container-benefits*/
+
+    .container-benefits1{
+        display: grid;
+        grid-template-columns: 1fr auto;
+        margin-bottom: 5rem;
+        gap: 60px;
+    }
+
+    .left-div-benefit{
+        grid-column: 1;
+    }
+
+    .right-div-benefit{
+        grid-column: 2;
+        justify-self: end;
+    }
+
+    .container-benefits2{
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        margin: 0;
+        padding: 0;
+    }
+
+    .texto-benefits{
+        margin-left: 9rem;
+    }
+
+    .container-benefits {
+        display: flex;
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 8rem 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
+      }
+
+      .title-benefit {
+        background-color: white;
+    }
+
+    /*-----------------------------*/
+    .tarjetas {
+        display: block;
+    }
+
+    .container-tarjetas-reviews {
+        display: flex;
+    }
+    
+    /*Estilos teams*/
+    .container-teams {
+        height: 200px;
+        background-color: #8B48BF;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .container-teams .title-teams {
+        max-width: 400px;
+        margin-bottom: 0;
+    }
+
+    button.boton-teams {
+        background-color: white;
+        color: #8B48BF;
+    }
+    
+    /*Footer*/
+    
+}  
