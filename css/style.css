@@ -111,7 +111,7 @@ header {
 /*Estilos de la sección beneficios*/
 .container-benefits {
     width: 100%;
-    /* padding: 48px 32px 0px 32px; */
+    padding: 48px 0px 0px 32px;
 }
 
 .caja-flex-benefits .beneficios {
@@ -183,7 +183,6 @@ header {
         top: -35px;
     }
 }
-
 
 .tarjeta-review-contenido p.title-review {
     font-size: 1.6rem;
@@ -424,7 +423,7 @@ footer > p {
         gap: 60px;
     }
 
-    .left-div-benefit{
+    .left-div-benefit {
         grid-column: 1;
     }
 
