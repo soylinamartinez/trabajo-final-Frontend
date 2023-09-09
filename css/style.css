@@ -111,7 +111,8 @@ header {
 /*Estilos de la sección beneficios*/
 .container-benefits {
     width: 100%;
-    padding: 48px 32px 0px 32px;
+    padding: 48px 0px 0px 32px;
+    
 }
 
 /* .caja-flex-benefits {
@@ -126,10 +127,19 @@ header {
 }
 
 .title-benefit {
-    margin-bottom: 8px;
+    /* margin-bottom: 8px;
     font-weight: 700;
     height: 45px;
-    background-color: rgba(139, 72, 191, 0.3);
+    background: rgba(139, 72, 191, 0.30); */
+    
+
+    display: flex;
+align-items: center;
+width: 100%;
+gap: 8px;
+align-self: stretch;
+border-radius: 50px 0px 0px 50px;
+background: rgba(139, 72, 191, 0.30);
 
     & span {
         background-color: #8B48BF;
@@ -331,7 +341,7 @@ footer > p {
 
 /*Media Queries*/
 
-@media (min-width: 800px) {
+@media (min-width: 800px) { /*Cuando exceda los 800px se aplicara esto*/
 
     .nav-bar {
         display: block;
@@ -388,4 +398,58 @@ footer > p {
         min-width: 350px;
         padding: 0;
     } 
+
+    .container-benefits1{
+        display: grid;
+        grid-template-columns: 1fr auto;
+        margin-bottom: 5rem;
+        gap: 60px;
+        
+    }
+    
+    .left-div-benefit{
+        grid-column: 1;
+    }
+
+    .right-div-benefit{
+        grid-column: 2;
+        justify-self: end;
+    }
+
+    .container-benefits2{
+        display: flex;
+    justify-content: center; /* Centra horizontalmente el contenido */
+    align-items: center; /* Centra verticalmente el contenido */
+    margin: 0;
+    padding: 0;
+    }
+
+    .texto-benefits{
+        margin-left: 9rem;
+
+    }
+    /* .container-benefits{
+       
+        display: flex;
+        width: 1440px;
+        padding: 8rem auto 0px;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    } */
+
+    .container-benefits {
+        display: flex;
+        max-width: 1440px; /* Establece un ancho máximo para el contenedor */
+        margin: 0 auto; /* Centra el contenedor horizontalmente */
+        padding: 8rem 0; /* Ajusta el espaciado según sea necesario */
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; /* Centra el contenido verticalmente */
+        gap: 24px;
+      }
+      .title-benefit {
+         background-color: white;  
+    }
+
 }
