@@ -109,46 +109,54 @@ header {
 }
 
 /*Estilos de la sección beneficios*/
+
 .container-benefits {
-    width: 100%;
-    padding: 48px 0px 0px 32px;
-}
-
-.caja-flex-benefits .beneficios {
-    min-width: 400px;
-    max-width: 530px;
-    margin-bottom: 16px;
-    font-size: 1.6rem;
-}
-
-.title-benefit {
     display: flex;
-    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
     width: 100%;
-    gap: 8px;
-    align-self: stretch;
-    border-radius: 50px 0px 0px 50px;
-    background: rgba(139, 72, 191, 0.30);
+    padding: 48px 32px;
 
-    & span {
-        background-color: #8B48BF;
-        padding: 10px 25px;
-        border-radius: 30px;
-        color: #FFFFFF;
-    }
+    & .benefits {
+        width: 100%;
+        font-size: 1.6rem;
+        margin: 0px 10px;
 
-    & p {
-        display: inline-block;
-        margin-left: 16px;
+        & .title-benefits {
+            background-color: rgba(139, 72, 191, 0.30);
+            border-radius: 50px 0px 0px 50px;
+            width: 100vw;
+            font-weight: bold;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+
+            & span {
+                background-color: #8B48BF;
+                width: 70px;
+                padding: 10px 25px;
+                color: #FFFFFF;
+                border-radius: 30px;
+            }
+        
+            & p {
+                margin-left: 20px;
+            }
+        }
+
+        & .text-benefits {
+            padding: 10px;
+        }
     }
 }
 
 /*Estilos de la seccion Reviews*/
 .container-reviews {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 100%;
-    margin-top: 56px;
-    background-color: bisque;
-    padding: 0 84px;
     text-align: center;
 }
 
@@ -158,30 +166,34 @@ header {
     letter-spacing: -1%;
     color: #242E53;
     text-align: center;
+    margin-top: 20px;
     margin-bottom: 72px;
 }
 
 .container-tarjetas-reviews {
-    margin-bottom: 48px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.tarjeta-review-contenido {
+    background-color: #FAFAFA;
+    width: 380px;
+    margin: 0px 20px;
+    padding: 56px 24px 32px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    
+    & .img-tarjeta {
+        position: absolute;
+        top: -35px;
+    }
 }
 
 .tarjetas {
     display: none;
-}
-
-.tarjeta-review-contenido {
-    background-color: #FAFAFA;
-    min-width:380px;
-    margin: 0 auto;
-    padding: 56px 24px 32px 24px;
-    position: relative;
-    text-align: center;
-
-    & .img-tarjeta {
-        position: absolute;
-        right: 155px;
-        top: -35px;
-    }
 }
 
 .tarjeta-review-contenido p.title-review {
@@ -199,7 +211,7 @@ p.parrafo-tarjeta-review {
 }
 
 .review-button {
-    margin-bottom: 48px;
+    margin: 48px;
 }
 
 button.primary-button {
@@ -416,58 +428,32 @@ footer > p {
 
     /*Aca van container-benefits*/
 
-    .container-benefits1{
-        display: grid;
-        grid-template-columns: 1fr auto;
-        margin-bottom: 5rem;
-        gap: 60px;
-    }
-
-    .left-div-benefit {
-        grid-column: 1;
-    }
-
-    .right-div-benefit{
-        grid-column: 2;
-        justify-self: end;
-    }
-
-    .container-benefits2{
-        display: flex;
-        justify-content: center;
-        align-items: center; 
-        margin: 0;
-        padding: 0;
-    }
-
-    .texto-benefits{
-        margin-left: 9rem;
-    }
-
     .container-benefits {
-        display: flex;
         max-width: 1440px;
-        margin: 0 auto;
-        padding: 8rem 0;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 24px;
-      }
 
-      .title-benefit {
-        background-color: white;
+        & .benefits {
+            width: 500px;
+
+            & .title-benefits {
+                background-color: transparent;
+            }
+    
+            & .text-benefits {
+                padding: 10px 10px 10px 90px;
+            }
+        }
     }
 
     /*-----------------------------*/
-    .tarjetas {
-        display: block;
+    .container-reviews h2 {
+        margin-top: 75px;
     }
 
-    .container-tarjetas-reviews {
+
+    .tarjetas {
         display: flex;
     }
-    
+
     /*Estilos teams*/
     .container-teams {
         height: 200px;
@@ -488,12 +474,19 @@ footer > p {
     }
     
     /*Footer*/
-    
-
     footer {
         display: flex;
         flex-direction: row-reverse;
         flex-wrap: wrap;
+        padding: 48px 100px; 
     }
 
+    .footer-menu {     
+        gap: 100px;
+    }
+
+    .footer-column {
+        display: flex;
+        flex-direction: column-reverse;
+    }
 }  
